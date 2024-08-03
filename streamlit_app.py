@@ -1,6 +1,12 @@
 import streamlit as st
+import pandas as pd
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Title of the app
+st.title('Data Display with Streamlit')
+
+# Load data
+file_path = 'E:\\Project\\automationpatch\\test.csv'  # Replace with your file path
+data = pd.read_csv(file_path)  # Use read_csv for CSV files
+
+# Display the data
+st.write(data)
